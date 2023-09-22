@@ -1,0 +1,352 @@
+body {
+    background-image: url("https://mailsecurity.com.br/wp-content/uploads/2023/05/img_dashboard.png");
+    margin: 0;
+    overflow: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_img_box {
+    margin: 50px 0 0 10%;
+}
+  
+#logo_img {
+width: 100%; /* Para tornar a imagem responsiva */
+max-width: 334.306px; /* Largura máxima da imagem */
+height: auto; /* Altura automática para manter a proporção */
+flex-shrink: 0;
+}
+
+div{
+    display: block;
+}
+
+* {
+    font-family: 'Sora', sans-serif !important;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.domain-search{
+    padding-top: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.domain-search-conteiner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8vh 10vw 0;
+    height: 90vh;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.domain-search-header{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Sora', sans-serif !important;
+    box-sizing: border-box;
+}
+
+.pre-header {
+    font-family: 'Sora', sans-serif !important;
+    color: #FFAE0D;
+    font-size: 16px;
+}
+
+.domain-search-label{
+    margin-right: auto;
+    margin-bottom: 0;
+    width: auto;
+    font-size: 70px;
+    line-height: 4rem;
+    box-sizing: border-box;
+}
+
+.domain-back-button-conteiner{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Sora', sans-serif !important;
+    box-sizing: border-box;
+}
+
+.domain-search-back-button{
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font: inherit;
+}
+.domain-search-back-button:hover {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.Dashboard {
+    margin: -60vh 10vw 12px;
+    padding: 0 25px;
+    background-color: white;
+    box-shadow: 0 8px 16px #29338A1A;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.Dashboard_body {
+    display: flex;
+}
+
+.Dashboard-header h1{
+    color: #2F3287;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+    font-family: 'Sora', sans-serif !important;
+}
+
+.Dashboard .Dmarc {
+    display: flex;
+    align-items: flex-start;
+}
+
+.Dashboard .Dmarc_summary {
+    flex: 1;
+    width: 60%;
+    margin-right: 48px;
+}
+
+.Dashboard_body .StatusSummary {
+    flex: 1;
+}
+
+.StatusSummary_row {
+    height: 158px;
+    display: flex;
+    align-items: center;
+    padding: 0 33px 0 33px;
+}
+
+.StatusSummary {
+    margin-bottom: 24px;
+}
+
+.StatusSummary_row{
+    height: 158px;
+    display: flex;
+    align-items: center;
+    padding: 0 33px 0 33px;
+}
+
+.StatusSummary_titles {
+    display: flex;
+    align-items: center;
+    padding: 0 12px 0 0;
+    flex: 1;
+}
+
+.StatusSummary_title {
+    color: #F4F7F9;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.StatusSummary_sub-title {
+    color: #F4F7F9;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.Dashboard_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 43px;
+    border-bottom: 1px solid rgba(1,33,105,0.2);
+    margin-bottom: 40px;
+}
+.List {
+    margin-bottom: 45px !important;
+    font-size: 14px;
+}
+
+.List li.List_title {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.List li {
+    margin-bottom: 12px;
+}
+
+.List_title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    color: #29338a;
+}
+
+.List_icon {
+    margin-right: 11px;
+    width: 23px;
+    height: 23px;
+}
+
+.List_item {
+    list-style-position: inside;
+    list-style-type: disc;
+    display: list-item;
+    padding-left: 44px;
+}
+
+.List_sub-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #29338a;
+    list-style-type: none;
+    padding-left: 44px;
+    padding-top: 12px;
+    margin-top: 24px;
+}
+
+.code-block {
+    background: #f5f8ff;
+    color: #000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 16px;
+    margin: 0 44px;
+    word-break: break-all;
+    border: 1px solid #D3DEE6;
+}
+
+.code-block code {
+    font-family: monospace, monospace !important;
+}
+
+code {
+    vertical-align: bottom;
+}
+
+.Dmarc_definition {
+    border-top: 1px solid rgba(1,33,105,0.2);
+    padding-top: 28px !important;
+    list-style: disc !important;
+}
+
+.Dmarc_definition li {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    .List_title {
+        padding:12px
+    }
+
+    .List_item {
+        padding: 24px
+    }
+
+    .List_item--no-decoration {
+        padding: 0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .StatusSummary_row {
+        padding:24px 0;
+        height: 224px;
+        flex-direction: column
+    }
+
+    .StatusSummary_row .Button {
+        margin-top: 24px
+    }
+
+    .StatusSummary_header {
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Dashboard {
+        padding:0
+    }
+
+    .Dashboard_title,.Dashboard_header {
+        padding: 12px
+    }
+
+    .Dashboard .Dmarc {
+        flex-direction: column
+    }
+
+    .Dashboard .Dmarc_summary {
+        width: 100%;
+        min-width: inherit;
+        margin-right: 0
+    }
+
+    .Dashboard_body {
+        flex-direction: column
+    }
+
+    .Dashboard_body .StatusSummary {
+        margin-right: 0
+    }
+
+    .Dashboard .Form {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        padding-left: 37px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Dmarc {
+        flex-direction:column
+    }
+
+    .Dmarc_definition {
+        padding: 12px !important
+    }
+
+    .Dmarc_summary {
+        width: 100%
+    }
+}
+
+@media (min-width: 2700px){
+    .List_item{
+        font-size: 22px;
+    }
+
+    .Dmarc_definition li{
+        font-size: 20px;
+    }
+    .code-block{
+        font-size: 18px;
+    }
+
+    .List_icon {
+        margin-right: 11px;
+        width: 28px;
+        height: 28px;
+    }
+}

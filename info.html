@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/info.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="/">
+        <div class="logo_img_box">
+            <img src="https://mailsecurity.com.br/wp-content/uploads/2023/06/logo_MailSecurity-white_site.png", id="logo_img">
+        </div>
+    </a>
+    
+    <div class="domain-search">
+        <div class="domain-search-conteiner">
+        
+            <div class="domain-search-header">
+                <h4 class="pre-header">SEU DOMINIO</h4>
+                <h1 class="domain-search-label" id="domain-label"></h1>
+            </div>
+            
+            <div class="domain-back-button-conteiner">
+                <button class="domain-search-back-button" id="back-button">Consultar outro Domínio</button>
+            </div>
+    
+        </div>
+    </div>
+    <div class="Dashboard">
+        <div class="Dashboard-header">
+            <h1 id="dashboard-title"></h1>
+        </div>
+        
+        <div class="Dashboard_body">
+            <div class="Dmarc">
+                <div class="Dmarc_summary">
+                    <div class="StatusSummary">
+                        <div class="StatusSummary_row" id="status-row">
+                            <div class="StatusSummary_titles">
+                                <img id="status-icon">
+                                <div class="StatusSummary_icon_title_conteiner">
+                                    <div class="StatusSummary_title" id="status-title"></div>
+                                    <div class="StatusSummary_sub-title" id="status-subtitle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="Dashboard_title">Critérios:</div>
+
+                    <div class="Record">
+                        <ul class="List" id="dmarc-list">
+                        </ul>
+                    </div>
+                    
+                    <div class="Record">
+                        <ul class="List" id="spf-list">
+                        </ul>
+                    </div>
+
+                    <ul class="Dmarc_definition">
+                        <li>
+                            DMARC (Autenticação, Relatórios e Conformidade de Mensagens Baseadas em Domínio) é um padrão amplamente implantado para autenticar
+                            a identidade do remetente. Ele fornece informações sobre todos os serviços enviados em seu domínio.
+                            Os domínios na aplicação do DMARC podem impedir ataques de falsificação de identidade de marcas e executivos.
+                        </li>
+                        <li>
+                            SPF (Sender Policy Framework) faz parte da estrutura de autenticação de e-mail.
+                            Em seu uso mais básico, ele permite uma lista branca de endereços IP que podem enviar e-mails usando seu domínio.
+                            A versão mais moderna e amigável da nuvem do Valimail cria registros SPF em tempo real com base na identificação automática do serviço.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/info.js"></script>
+</body>
+</html>
