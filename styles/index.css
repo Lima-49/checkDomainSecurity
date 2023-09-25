@@ -44,21 +44,19 @@ body {
   }
   
   .search_conteiner {
-    display: flex;
-    flex-direction: column;
     margin-left: 10%;
     margin-top: 1%;
-    width: 100%; /* Para preencher a largura do contêiner pai */
-  }
+    width: 100%;
+}
   
-  #search_input {
+#search_input {
     font-family: 'Sora', sans-serif !important;
     font-size: 16px;
     font-weight: 700;
     color: #474747;
     width: 764px;
     height: 53px;
-  }
+}
   
   #search_btn {
     font-family: 'Sora', sans-serif !important;
@@ -68,6 +66,8 @@ body {
     background: #FFAE0D;
     width: 154.035px;
     height: 53.446px;
+    position: relative;
+    display: inline-block;
   }
   
   /* Media queries para tornar o design responsivo */

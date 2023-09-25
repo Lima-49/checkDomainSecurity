@@ -1,11 +1,11 @@
 const apiURL = "http://127.0.0.1:5000/api/verificar-dominio/"
 
-// Recupere o valor do campo de entrada
-var dominio = document.getElementById('search_input').value;
-
 // Adicione um evento de clique ao botão "Verificar Domínio"
 document.getElementById('search_btn').addEventListener('click', async function () {
     
+    // Recupere o valor do campo de entrada
+    var dominio = document.getElementById('search_input').value;
+
     // Verifique se o campo de entrada não está vazio
     if (dominio.trim() !== '') {
         try {
@@ -15,15 +15,19 @@ document.getElementById('search_btn').addEventListener('click', async function (
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             };
 
-            let response = await fetch(`${apiURL}${dominio}.json`, {
+            console.log(`${apiURL}${dominio}`)
+
+            let response = await fetch(`${apiURL}${dominio}`, {
                 method: "GET",
                 headers: headersList,
-                timeout: 10000 // Defina um timeout para a solicitação (10 segundos)
+                timeout: 20000 // Defina um timeout para a solicitação (10 segundos)
             });
 
             if (response.status === 200) {
                 // A resposta foi bem-sucedida, então obtenha os dados
                 let data = await response.text();
+                localStorage.setItem('dominio', dominio);
+                localStorage.setItem('data', data)
                 window.location.href = `info.html?domain=${dominio}`;
 
             } else {
@@ -45,6 +49,9 @@ document.getElementById('search_input').addEventListener('keyup', async function
 
     if (event.key == 'Enter'){
 
+        // Recupere o valor do campo de entrada
+        var dominio = document.getElementById('search_input').value;
+
         // Verifique se o campo de entrada não está vazio
         if (dominio.trim() !== '') {
             try {
@@ -53,8 +60,10 @@ document.getElementById('search_input').addEventListener('keyup', async function
                     "Accept": "*/*",
                     "User-Agent": "Thunder Client (https://www.thunderclient.com)"
                 };
+                
+                console.log(`${apiURL}${dominio}`)
 
-                let response = await fetch(`${apiURL}${dominio}.json`, {
+                let response = await fetch(`${apiURL}${dominio}`, {
                     method: "GET",
                     headers: headersList,
                     timeout: 10000 // Defina um timeout para a solicitação (10 segundos)
@@ -63,6 +72,8 @@ document.getElementById('search_input').addEventListener('keyup', async function
                 if (response.status === 200) {
                     // A resposta foi bem-sucedida, então obtenha os dados
                     let data = await response.text();
+                    localStorage.setItem('dominio', dominio);
+                    localStorage.setItem('data', data)
                     window.location.href = `info.html?domain=${dominio}`;
 
                 } else {

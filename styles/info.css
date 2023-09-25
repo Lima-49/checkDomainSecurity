@@ -7,6 +7,14 @@ body {
     flex-direction: column;
 }
 
+.background-green {
+    background-color: #21A500;
+  }
+  
+.background-red {
+background-color: #D63230;
+}
+
 .logo_img_box {
     margin: 50px 0 0 10%;
 }
