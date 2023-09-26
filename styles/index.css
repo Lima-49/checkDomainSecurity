@@ -57,19 +57,54 @@ body {
     width: 764px;
     height: 53px;
 }
-  
-  #search_btn {
-    font-family: 'Sora', sans-serif !important;
-    font-size: 16px;
-    font-weight: 700;
-    color: #FFF;
-    background: #FFAE0D;
-    width: 154.035px;
-    height: 53.446px;
-    position: relative;
-    display: inline-block;
-  }
-  
+
+#search_btn {
+  font-family: 'Sora', sans-serif !important;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFF;
+  background: #FFAE0D;
+  width: 154.035px;
+  height: 53.446px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.loading_conteiner{
+  display: none
+}
+
+.loading-overlay {
+  display: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  color: #fff;
+}
+
+.loader {
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-top: 10px solid #FFAE0D;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
   /* Media queries para tornar o design responsivo */
   @media screen and (max-width: 768px) {
   
@@ -87,6 +122,15 @@ body {
     #search_input,
     #search_btn {
         width: 80%; /* Preencher a largura do contêiner pai */
+    }
+
+    .loader{
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #FFAE0D;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+
     }
   }
   

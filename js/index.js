@@ -1,10 +1,12 @@
-const apiURL = "http://127.0.0.1:5000/api/verificar-dominio/"
+const apiURL = "https://api-check-domain.onrender.com/api/verificar-dominio/"
 
 // Adicione um evento de clique ao botão "Verificar Domínio"
 document.getElementById('search_btn').addEventListener('click', async function () {
     
     // Recupere o valor do campo de entrada
     var dominio = document.getElementById('search_input').value;
+
+    document.querySelector('.loading_conteiner').style.display = 'block';
 
     // Verifique se o campo de entrada não está vazio
     if (dominio.trim() !== '') {
@@ -30,16 +32,24 @@ document.getElementById('search_btn').addEventListener('click', async function (
                 localStorage.setItem('data', data)
                 window.location.href = `info.html?domain=${dominio}`;
 
+                document.querySelector('.loading_conteiner').style.display = 'none'
+
             } else {
                 // A resposta não foi bem-sucedida, trate o erro aqui
                 console.error('Erro na chamada da API');
+                document.querySelector('.loading_conteiner').style.display = 'none';
+
             }
         } catch (error) {
             console.error('Erro na chamada da API', error);
+            document.querySelector('.loading_conteiner').style.display = 'none';
+
         }
     } else {
         // O campo de entrada está vazio, trate isso aqui
         console.error('Campo de entrada vazio');
+        document.querySelector('.loading_conteiner').style.display = 'none';
+
     }
 });
 
@@ -49,6 +59,8 @@ document.getElementById('search_input').addEventListener('keyup', async function
 
     if (event.key == 'Enter'){
 
+        document.querySelector('.loading_conteiner').style.display = 'block';
+        
         // Recupere o valor do campo de entrada
         var dominio = document.getElementById('search_input').value;
 
@@ -76,16 +88,21 @@ document.getElementById('search_input').addEventListener('keyup', async function
                     localStorage.setItem('data', data)
                     window.location.href = `info.html?domain=${dominio}`;
 
+                    document.querySelector('.loading_conteiner').style.display = 'none';
+
                 } else {
                     // A resposta não foi bem-sucedida, trate o erro aqui
                     console.error('Erro na chamada da API');
+                    document.querySelector('.loading_conteiner').style.display = 'none';
                 }
             } catch (error) {
                 console.error('Erro na chamada da API', error);
+                document.querySelector('.loading_conteiner').style.display = 'none';
             }
         } else {
             // O campo de entrada está vazio, trate isso aqui
             console.error('Campo de entrada vazio');
+            document.querySelector('.loading_conteiner').style.display = 'none';
         }
     }
     
