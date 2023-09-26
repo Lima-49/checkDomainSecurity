@@ -44,19 +44,28 @@ body {
     line-height: normal;
   }
   
+   #title2 {
+    color: #FFF;
+    font-family: "Heebo", Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: lime;
+    font-weight: 700;
+    line-height: normal;
+  }
   .search_conteiner {
     margin-left: 10%;
     margin-top: 1%;
     width: 100%;
+    display: flex;
 }
   
 #search_input {
     font-family: 'Sora', sans-serif !important;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 700;
     color: #474747;
-    width: 764px;
-    height: 53px;
+    width: 1200px;
+    height: 70px;
 }
 
 #search_btn {
@@ -65,8 +74,8 @@ body {
   font-weight: 700;
   color: #FFF;
   background: #FFAE0D;
-  width: 154.035px;
-  height: 53.446px;
+  width: 175px;
+  height: 70.446px;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -132,6 +141,11 @@ body {
       width: 100px;
       height: 100px;
 
+    }
+
+    .search_conteiner{
+      position: relative;
+      display: inline-block;
     }
   }
   

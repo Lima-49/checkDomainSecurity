@@ -46,9 +46,9 @@ if (dmarcExists){
       statusRow.classList.add('background-green');
       document.getElementById('status_summary_title').textContent = "Protegido";
       document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
-      statusIcon.src = "./img/email_correto_branco.svg";
+      statusIcon.src = "./img/email_correto_branco.png";
 
-      listIcon.src = "./img/email_correto_verde.svg";
+      listIcon.src = "./img/email_correto_branco.png";
       const dmarcList = document.getElementById('dmarc-list');
       const novoItem = document.createElement('li')
       novoItem.textContent = "Um registro DMARC foi configurado para esse domínio e atende às nossas recomendações de práticas recomendadas.";
@@ -60,9 +60,13 @@ if (dmarcExists){
       statusRow.classList.add('background-red');
       document.getElementById('status_summary_title').textContent = "Desprotegido";
       document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
+
+      document.querySelector('#btn_proteger_dominio').style.display = 'block';
       
-      statusIcon.src = "./img/email_incorreto_branco.svg";
-      listIcon.src = "./img/email_incorreto_vermelho.svg";
+      statusIcon.src = "./img/email_incorreto_branco.png";
+      listIcon.src = "./img/email_incorreto_branco.png";
+      document.querySelector('#btn_proteger_dominio').style.display = 'block';
+
       const dmarcList = document.getElementById('dmarc-list');
       const novoItem = document.createElement('li')
       novoItem.textContent = "Um registro DMARC não foi configurado para esse domínio.";
@@ -76,9 +80,11 @@ if (dmarcExists){
   statusRow.classList.add('background-red');
   document.getElementById('status_summary_title').textContent = "Desprotegido";
   document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
-  statusIcon.src = "./img/email_incorreto_branco.svg";
 
-  listIcon.src = "./img/email_incorreto_vermelho.svg";
+  statusIcon.src = "./img/email_incorreto_branco.png";
+  listIcon.src = "./img/email_incorreto_branco.png";
+  document.querySelector('#btn_proteger_dominio').style.display = 'block';
+
   const dmarcList = document.getElementById('dmarc-list');
 
   const itemUm = document.createElement('li')
@@ -93,6 +99,15 @@ if (dmarcExists){
   dmarcList.appendChild(itemDois)
 
 }
+
+// Encontre o botão por ID
+const btnProtegerDominio = document.getElementById('btn_proteger_dominio');
+
+// Adicione um evento de clique ao botão
+btnProtegerDominio.addEventListener('click', function() {
+    // Redirecione para a URL desejada
+    window.location.href = 'https://mailsecurity.com.br/mailsecurity-dmarc-enforcement/';
+});
 
 if(dmarcText != null){
 
@@ -130,7 +145,7 @@ if (spfExists){
 
   if (spfAtEnforcement) {
 
-    listIconSpf.src = "./img/email_correto_verde.svg";
+    listIconSpf.src = "./img/email_correto_branco.png";
     const spfList = document.getElementById('spf-list');
     
     const itemUm = document.createElement('li')
@@ -146,7 +161,7 @@ if (spfExists){
 
   } else {
 
-    listIconSpf.src = "./img/email_incorreto_vermelho.svg";
+    listIconSpf.src = "./img/email_incorreto_branco.png";
     const spfList = document.getElementById('spf-list');
     
     const itemUm = document.createElement('li')
@@ -166,7 +181,7 @@ if (spfExists){
 
 } else{
 
-listIconSpf.src = "./img/email_incorreto_vermelho.svg";
+listIconSpf.src = "./img/email_incorreto_branco.png";
 const dmarcList = document.getElementById('spf-list');
 
 const itemUm = document.createElement('li')

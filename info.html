@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/info.css" />
-    <title>Document</title>
+    <title>Verificaçao de identidade do remetente do e-mail - autenticação e segurança de e-mails MailSecurity Protection</title>
 </head>
 <body>
 
@@ -17,12 +17,12 @@
         <div class="domain-search-conteiner">
         
             <div class="domain-search-header">
-                <h4 class="pre-header">SEU DOMINIO</h4>
+                <h4 class="pre-header">SEU DOMINIO - RESULTADO DA SEGURANÇA</h4>
                 <h1 class="domain-search-label" id="domain-label"></h1>
             </div>
             
             <div class="domain-back-button-conteiner">
-                <button class="domain-search-back-button" id="back-button">Consultar outro Domínio</button>
+                <button class="domain-search-back-button" id="back-button">> Consulte outro Domínio</button>
             </div>
     
         </div>
@@ -44,6 +44,9 @@
                                     <div class="StatusSummary_sub-title" id="status_summary_sub_title"></div>
                                 </div>
                             </div>
+                            <div class="Button_proteger_dominio" href="">
+                                <img src="./img/botao.png" id="btn_proteger_dominio">
+                            </div>
                         </div>
                     </div>
                     
@@ -53,7 +56,7 @@
                         <ul class="List" id="dmarc-list">
                             <li class="List_title">
                                 <img class="List_icon" id="list_icon">
-                                DMARC na Aplicação
+                                Registro DMARC atual
                             </li>
                         </ul>
                     </div>
@@ -62,25 +65,27 @@
                         <ul class="List" id="spf-list">
                             <li class="List_title">
                                 <img class="List_icon" id="list_icon_spf">
-                                SPF na Aplicação
+                                Registro SPF atual
                             </li>
                         </ul>
                     </div>
 
                     <ul class="Dmarc_definition">
                         <li>
-                            DMARC (Autenticação, Relatórios e Conformidade de Mensagens Baseadas em Domínio) é um padrão amplamente implantado para autenticar
-                            a identidade do remetente. Ele fornece informações sobre todos os serviços enviados em seu domínio.
+                            <b>DMARC (Autenticação, Relatórios e Conformidade de Mensagens Baseadas em Domínio)</b> é um padrão amplamente implantado para autenticar
+                            a identidade do remetente.<br>Ele fornece informações sobre todos os serviços enviados em seu domínio.
                             Os domínios na aplicação do DMARC podem impedir ataques de falsificação de identidade de marcas e executivos.
                         </li>
                         <li>
-                            SPF (Sender Policy Framework) faz parte da estrutura de autenticação de e-mail.
-                            Em seu uso mais básico, ele permite uma lista branca de endereços IP que podem enviar e-mails usando seu domínio.
-                            A versão mais moderna e amigável da nuvem do Valimail cria registros SPF em tempo real com base na identificação automática do serviço.
+                            <b>SPF (Sender Policy Framework)</b> faz parte da estrutura de autenticação de e-mail.
+                            Em seu uso mais básico, ele permite uma lista branca de endereços IP que podem enviar e-mails usando seu domínio.<br>
+                            A versão mais moderna e amigável da nuvem do MailSecurity DMARC Enforcement cria registros SPF em tempo real com base na identificação automática do serviço.<br/><br/><br/><br/><br/>
+							
+							
                         </li>
                     </ul>
 
-                </div>
+                </div><br/>
             </div>
         </div>
     </div>

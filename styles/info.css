@@ -7,6 +7,7 @@ body {
     flex-direction: column;
 }
 
+
 .background-green {
     background-color: #21A500;
   }
@@ -51,7 +52,7 @@ ul{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 8vh 10vw 0;
+    padding: 1vh 10vw 0;
     height: 90vh;
     background: transparent;
     box-sizing: border-box;
@@ -81,7 +82,7 @@ ul{
 
 .domain-back-button-conteiner{
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Sora', sans-serif !important;
     box-sizing: border-box;
 }
@@ -99,13 +100,15 @@ ul{
 }
 
 .Dashboard {
-    margin: -60vh 10vw 12px;
-    padding: 0 25px;
+    margin: -65vh 10vw 12px;
+    padding: 0 20px;
     background-color: white;
     box-shadow: 0 8px 16px #29338A1A;
     display: flex;
     align-items: flex-start;
-    flex-direction: column
+    flex-direction: column;
+	border-radius: 1% 1% 1% 1%;
+	
 }
 
 .Dashboard_body {
@@ -165,23 +168,33 @@ ul{
 .StatusSummary_title {
     color: #F4F7F9;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 40px;
     line-height: 44px;
 }
 
 .StatusSummary_sub-title {
     color: #F4F7F9;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
+}
+.StatusSummary_icon_title_conteiner{
+    padding-left: 15px;
+}
+
+#btn_proteger_dominio{
+    display: none;
+    cursor: pointer;
 }
 
 .Dashboard_title {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 22px;
+	color: #999999;
     line-height: 43px;
     border-bottom: 1px solid rgba(1,33,105,0.2);
     margin-bottom: 40px;
+    padding-left: 4px;
 }
 .List {
     margin-bottom: 45px !important;
@@ -200,8 +213,9 @@ ul{
 .List_title {
     font-weight: 500;
     font-size: 28px;
+	font-family: "Heebo", Helvetica, sans-serif;
     line-height: 38px;
-    color: #29338a;
+    color: #333333;
 }
 
 .List_icon {
@@ -212,6 +226,9 @@ ul{
 
 .List_item {
     list-style-position: inside;
+	font-size: 22px;
+	word-break: break-all ;
+	color: #999999;
     list-style-type: disc;
     display: list-item;
     padding-left: 44px;
@@ -233,8 +250,8 @@ ul{
     color: #000;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 35px;
     padding: 16px;
     margin: 0 44px;
     word-break: break-all;
@@ -257,9 +274,11 @@ code {
 
 .Dmarc_definition li {
     font-weight: 500;
-    font-size: 13px;
-    line-height: 22px;
-    margin-bottom: 12px;
+    font-size: 12px;
+	color: #999999;
+	margin: 0 44px;
+    line-height: 20px;
+    margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -298,7 +317,7 @@ code {
     }
 
     .Dashboard_title,.Dashboard_header {
-        padding: 12px
+        padding: 15px
     }
 
     .Dashboard .Dmarc {
@@ -344,13 +363,16 @@ code {
 @media (min-width: 2700px){
     .List_item{
         font-size: 22px;
+		
     }
 
     .Dmarc_definition li{
         font-size: 20px;
+		
     }
     .code-block{
         font-size: 18px;
+		
     }
 
     .List_icon {
