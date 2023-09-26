@@ -61,7 +61,8 @@ if (dmarcExists){
       document.getElementById('status_summary_title').textContent = "Desprotegido";
       document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
       
-      statusIcon.src = "./img/email_incorreto_vermelho.svg";
+      statusIcon.src = "./img/email_incorreto_branco.svg";
+      listIcon.src = "./img/email_incorreto_vermelho.svg";
       const dmarcList = document.getElementById('dmarc-list');
       const novoItem = document.createElement('li')
       novoItem.textContent = "Um registro DMARC não foi configurado para esse domínio.";
