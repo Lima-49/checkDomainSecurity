@@ -20,10 +20,11 @@ background-color: #D63230;
 }
   
 #logo_img {
-width: 100%; /* Para tornar a imagem responsiva */
-max-width: 334.306px; /* Largura máxima da imagem */
-height: auto; /* Altura automática para manter a proporção */
-flex-shrink: 0;
+    width: 100%; /* Para tornar a imagem responsiva */
+    max-width: 334.306px; /* Largura máxima da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
 div{
