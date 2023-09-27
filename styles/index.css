@@ -38,18 +38,18 @@ body {
   #title {
     color: #FFF;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 54px;
+    font-size: 65px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
   
    #title2 {
-    color: #FFF;
+    color: #DDDDDD;
     font-family: "Heebo", Helvetica, sans-serif;
     font-size: 22px;
     font-style: lime;
-    font-weight: 700;
+    font-weight: 200;
     line-height: normal;
   }
   .search_conteiner {
@@ -61,24 +61,28 @@ body {
   
 #search_input {
     font-family: 'Sora', sans-serif !important;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 300;
     color: #474747;
     width: 1200px;
     height: 70px;
+	
+	
+	
 }
 
 #search_btn {
   font-family: 'Sora', sans-serif !important;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 650;
   color: #FFF;
-  background: #FFAE0D;
-  width: 175px;
-  height: 70.446px;
+  background: #FC7025;
+  width: 180px;
+  height: 70px;
   position: relative;
   display: inline-block;
   cursor: pointer;
+  border: 5px solid #FFFF;
 }
 
 .loading_conteiner{

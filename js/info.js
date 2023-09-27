@@ -45,13 +45,13 @@ if (dmarcExists){
       // Se for verdadeiro, aplique a classe com o fundo verde
       statusRow.classList.add('background-green');
       document.getElementById('status_summary_title').textContent = "Protegido";
-      document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
+      document.getElementById('status_summary_sub_title').textContent = "Contra ataques de falsificação de identidade";
       statusIcon.src = "./img/email_correto_branco.png";
 
       listIcon.src = "./img/email_correto_branco.png";
       const dmarcList = document.getElementById('dmarc-list');
       const novoItem = document.createElement('li')
-      novoItem.textContent = "Um registro DMARC foi configurado para esse domínio e atende às nossas recomendações de práticas recomendadas.";
+      novoItem.textContent = "Muito bem! Seu domínio está protegido contra abusos por phishers e spammers e atende às nossas recomendações de segurança.";
       novoItem.classList.add('List_item')
       dmarcList.appendChild(novoItem);
 
@@ -59,7 +59,7 @@ if (dmarcExists){
       // Caso contrário, aplique a classe com o fundo vermelho
       statusRow.classList.add('background-red');
       document.getElementById('status_summary_title').textContent = "Desprotegido";
-      document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
+      document.getElementById('status_summary_sub_title').textContent = "Contra ataques de falsificação de identidade";
 
       document.querySelector('#btn_proteger_dominio').style.display = 'block';
       
@@ -69,7 +69,7 @@ if (dmarcExists){
 
       const dmarcList = document.getElementById('dmarc-list');
       const novoItem = document.createElement('li')
-      novoItem.textContent = "Um registro DMARC não foi configurado para esse domínio.";
+      novoItem.textContent = "Seu domínio não está protegido contra abuso por phishers e spammers! Qualquer um pode enviar mensagens se passando por esse domínio, sem ser detectado.";
       novoItem.classList.add('List_item')
       dmarcList.appendChild(novoItem);
 
@@ -79,7 +79,7 @@ if (dmarcExists){
   // Caso contrário, aplique a classe com o fundo vermelho
   statusRow.classList.add('background-red');
   document.getElementById('status_summary_title').textContent = "Desprotegido";
-  document.getElementById('status_summary_sub_title').textContent = "contra ataques de falsificação de identidade";
+  document.getElementById('status_summary_sub_title').textContent = "Contra ataques de falsificação de identidade";
 
   statusIcon.src = "./img/email_incorreto_branco.png";
   listIcon.src = "./img/email_incorreto_branco.png";
@@ -88,11 +88,11 @@ if (dmarcExists){
   const dmarcList = document.getElementById('dmarc-list');
 
   const itemUm = document.createElement('li')
-  itemUm.textContent = "Um registro DMARC não foi configurado para esse domínio."
+  itemUm.textContent = "Seu domínio não está totalmente protegido contra abusos de phishers e spammers. Qualquer um pode enviar mensagens se passando por esse domínio, sem ser detectado.";
   itemUm.classList.add('List_item')
 
   const itemDois = document.createElement('li')
-  itemDois.textContent = "Qualquer um pode enviar mensagens se passando por esse domínio, sem ser detectado."
+  itemDois.textContent = "Deixe-nos ajudá-lo a corrigir isso e iniciar uma avaliação gratuita de 21 dias."
   itemDois.classList.add('List_item')
 
   dmarcList.appendChild(itemUm)
@@ -149,11 +149,11 @@ if (spfExists){
     const spfList = document.getElementById('spf-list');
     
     const itemUm = document.createElement('li')
-    itemUm.textContent = "Um registo SPF está configurado para este domínio e cumpre as nossas recomendações de boas práticas; no entanto, pode haver serviços a enviar a partir do seu domínio que podem estar em falta ou ter registos SPF mal configurados.";
+    itemUm.textContent = "Parabéns! Seu registro SPF é válido. Um registo SPF está configurado para este domínio e cumpre as nossas recomendações de boas práticas.";
     itemUm.classList.add('List_item')
     
     const itemDois = document.createElement('li')
-    itemDois.textContent = `Os servidores de E-mail que processam este registo SPF efectuam um máximo de ${data.spf.info.domain_lookup_count} pesquisas de domínio. O SPF limita cada registo a um máximo de 10 pesquisas de domínio. Os registos com mais pesquisas devem esperar uma capacidade de entrega reduzida.`
+    itemDois.textContent = `Os servidores de E-mail que processam este registo SPF efectuam um máximo de ${data.spf.info.domain_lookup_count} pesquisas de domínio. O SPF limita cada registo a um máximo de 10 pesquisas de domínio.`
     itemDois.classList.add('List_item')
 
     spfList.appendChild(itemUm);

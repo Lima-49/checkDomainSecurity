@@ -68,7 +68,8 @@ ul{
 .pre-header {
     font-family: 'Sora', sans-serif !important;
     color: #FFAE0D;
-    font-size: 16px;
+    font-size: 20px;
+	font-weight: 500;
 }
 
 .domain-search-label{
@@ -103,11 +104,12 @@ ul{
     margin: -65vh 10vw 12px;
     padding: 0 20px;
     background-color: white;
-    box-shadow: 0 8px 16px #29338A1A;
+    box-shadow: 1 8px 16px #535362;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-	border-radius: 1% 1% 1% 1%;
+	border-radius: 0% 0% 0% 0%;
+	border: 8px solid #D3DEE6;
 	
 }
 
@@ -174,8 +176,8 @@ ul{
 
 .StatusSummary_sub-title {
     color: #F4F7F9;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 22px;
     line-height: 22px;
 }
 .StatusSummary_icon_title_conteiner{
@@ -185,11 +187,13 @@ ul{
 #btn_proteger_dominio{
     display: none;
     cursor: pointer;
+	margin-bottom: 10px;
+    padding: 120px;
 }
 
 .Dashboard_title {
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 25px;
 	color: #999999;
     line-height: 43px;
     border-bottom: 1px solid rgba(1,33,105,0.2);
@@ -198,7 +202,7 @@ ul{
 }
 .List {
     margin-bottom: 45px !important;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .List li.List_title {
@@ -211,7 +215,7 @@ ul{
 }
 
 .List_title {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 28px;
 	font-family: "Heebo", Helvetica, sans-serif;
     line-height: 38px;
@@ -227,16 +231,17 @@ ul{
 .List_item {
     list-style-position: inside;
 	font-size: 22px;
+	font-weight: 300;
 	word-break: break-all ;
-	color: #999999;
+	color: #666666;
     list-style-type: disc;
     display: list-item;
-    padding-left: 44px;
+    padding-left: 45px;
 }
 
 .List_sub-title {
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 25px;
     line-height: 25px;
     color: #29338a;
     list-style-type: none;
@@ -255,7 +260,7 @@ ul{
     padding: 16px;
     margin: 0 44px;
     word-break: break-all;
-    border: 1px solid #D3DEE6;
+    border: 2px solid #D3DEE6;
 }
 
 .code-block code {
@@ -273,7 +278,7 @@ code {
 }
 
 .Dmarc_definition li {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 12px;
 	color: #999999;
 	margin: 0 44px;
