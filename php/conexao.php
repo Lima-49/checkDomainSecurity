@@ -1,9 +1,8 @@
 <?php
-
 include('config.php');
 
 // Conectar ao banco de dados
-$conexao = new mysqli($host, $usuario, $senha, $banco);
+$conexao = new mysqli($hostname, $user, $password, $database);
 
 // Verificar a conexão
 if ($conexao->connect_error) {
