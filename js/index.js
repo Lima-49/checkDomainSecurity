@@ -5,14 +5,12 @@ const searchInput = document.getElementById('search_input');
 const loadingContainer = document.querySelector('.loading_conteiner');
 
 searchBtn.addEventListener('click', async function () {
-    var domainSearched = await searchDomain();
-    //window.location.href = domainSearched
+    await searchDomain();
 });
 
 searchInput.addEventListener('keyup', async function (event) {
     if (event.key === 'Enter') {
-        var domainSearched = await searchDomain();
-        //window.location.href = domainSearched
+        await searchDomain();
     }
 });
 
@@ -37,9 +35,7 @@ async function searchDomain() {
                 const data = await response.text();
                 localStorage.setItem('dominio', dominio);
                 localStorage.setItem('data', data);
-
-                await insertDataBase(dominio);
-                return `info.html?domain=${dominio}`;
+                window.location.href = `info.html?domain=${dominio}`;
 
             } else {
                 console.error('Erro na chamada da API');
@@ -52,25 +48,5 @@ async function searchDomain() {
     } else {
         console.error('Campo de entrada vazio');
         loadingContainer.style.display = 'none';
-    }
-}
-
-async function insertDataBase(dominio) {
-    try {
-
-        const response = await fetch("./php/database.php", {
-            method: "POST",
-            body: `dominio_pesquisa=${dominio}`,
-            timeout: 10000
-        });
-
-        if (response.status === 200) {
-            const data = await response.text();
-            console.log("Resposta do servidor: ", data);
-        } else {
-            console.error('Erro na chamada da API');
-        }
-    } catch (error) {
-        console.error('Erro na chamada da API', error);
     }
 }
