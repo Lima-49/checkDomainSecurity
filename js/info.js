@@ -33,9 +33,10 @@ if (dmarcExists) {
 
         const dmarcList = document.getElementById('dmarc-list');
         const novoItem = document.createElement('li');
-        novoItem.textContent = "Muito bem! Seu domínio está protegido contra abusos por phishers e spammers e atende às nossas recomendações de segurança.";
+        novoItem.innerHTML = "<strong>Sua política DMARC está ótima!</strong> Seu domínio está protegido contra abusos por phishers e spammers e atende às nossas recomendações de segurança.";
         novoItem.classList.add('List_item');
         dmarcList.appendChild(novoItem);
+        
     } else {
         statusRow.classList.add('background-red');
         document.getElementById('status_summary_title').textContent = "Desprotegido";
@@ -47,8 +48,8 @@ if (dmarcExists) {
 
         const dmarcList = document.getElementById('dmarc-list');
         const novoItem = document.createElement('li');
-        novoItem.textContent = "Seu domínio não está protegido contra abuso por phishers e spammers! Qualquer um pode enviar mensagens se passando por esse domínio, sem ser detectado.";
-        novoItem.classList.add('List_item');
+	    novoItem.textContent = " Um registro DMARC é definido, mas há alguns problemas de configuração que podem afetar a segurança, a visibilidade e a capacidade de entrega de emails enviados desse domínio.";
+        novoItem.classList.add('List_item')
         dmarcList.appendChild(novoItem);
     }
 } else {
@@ -62,11 +63,11 @@ if (dmarcExists) {
     const dmarcList = document.getElementById('dmarc-list');
     const itemUm = document.createElement('li');
     itemUm.textContent = "Seu domínio não está totalmente protegido contra abusos de phishers e spammers. Qualquer um pode enviar mensagens se passando por esse domínio, sem ser detectado.";
-    itemUm.classList.add('List_item');
-
-    const itemDois = document.createElement('li');
-    itemDois.textContent = "Deixe-nos ajudá-lo a corrigir isso e iniciar uma avaliação gratuita de 21 dias.";
-    itemDois.classList.add('List_item');
+    itemUm.classList.add('List_item')
+  
+    const itemDois = document.createElement('li')
+    itemDois.textContent = "Deixe-nos ajudá-lo a corrigir isso e iniciar uma avaliação gratuita de 21 dias."
+    itemDois.classList.add('List_item')
 
     dmarcList.appendChild(itemUm);
     dmarcList.appendChild(itemDois);
@@ -103,8 +104,8 @@ if (spfExists) {
         listIconSpf.src = "./img/email_correto_branco.png";
         const spfList = document.getElementById('spf-list');
         const itemUm = document.createElement('li');
-        itemUm.textContent = "Parabéns! Seu registro SPF é válido. Um registo SPF está configurado para este domínio e cumpre as nossas recomendações de boas práticas.";
-        itemUm.classList.add('List_item');
+        itemUm.textContent = "Sua política de SPF está ótima! Seu registro SPF é válido. Um registo SPF está configurado para este domínio e cumpre as nossas recomendações de boas práticas.";
+        itemUm.classList.add('List_item')
 
         const itemDois = document.createElement('li');
         itemDois.textContent = `Os servidores de E-mail que processam este registo SPF efectuam um máximo de ${data.spf.info.domain_lookup_count} pesquisas de domínio. O SPF limita cada registo a um máximo de 10 pesquisas de domínio.`;
