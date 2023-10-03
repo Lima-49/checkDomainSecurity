@@ -130,6 +130,11 @@ if (spfExists) {
         spfList.appendChild(itemDois);
     }
 } else {
+    statusRow.classList.add('background-red');
+    document.getElementById('status_summary_title').textContent = "Desprotegido";
+    document.getElementById('status_summary_sub_title').textContent = "Contra ataques de falsificação de identidade";
+    document.querySelector('#btn_proteger_dominio').style.display = 'block';
+    statusIcon.src = "./img/email_incorreto_branco.png";
     listIconSpf.src = "./img/email_incorreto_branco.png";
     const spfList = document.getElementById('spf-list');
 

@@ -104,17 +104,9 @@ ul{
     margin: -65vh 10vw 12px;
     padding: 0 20px;
     background-color: white;
-    box-shadow: 1 8px 16px #535362;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-	border-radius: 0% 0% 0% 0%;
-	border: 8px solid #D3DEE6;
-	
-}
-
-.Dashboard_body {
-    display: flex;
+    box-shadow: 1px 8px 16px #535362;
+    border-radius: 0%;
+    border: 8px solid #D3DEE6;
 }
 
 .Dashboard-header h1{
@@ -150,10 +142,12 @@ ul{
 }
 
 .StatusSummary {
+    flex: 1;
     margin-bottom: 24px;
 }
 
 .StatusSummary_row{
+    flex: 1;
     height: 158px;
     display: flex;
     align-items: center;
@@ -384,5 +378,27 @@ code {
         margin-right: 11px;
         width: 28px;
         height: 28px;
+    }
+}
+
+@media (max-width: 1116px){
+    #btn_proteger_dominio {
+        display: none;
+        cursor: pointer;
+        margin-bottom: 0;
+        padding: 0;
+        height: 60px;
+    }
+
+    .StatusSummary_row {
+        flex: 1;
+        height: 158px;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 33px 0 33px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: flex-start;
     }
 }
