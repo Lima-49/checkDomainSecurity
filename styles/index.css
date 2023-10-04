@@ -1,155 +1,152 @@
 body {
-    background-image: url("https://mailsecurity.com.br/wp-content/uploads/2023/05/img_dashboard.png");
-    margin: 0;
-    overflow: hidden;
-    background-repeat: no-repeat;
-  }
-  
-  .logo_img_box {
-    margin: 50px 0 0 10%;
-  }
-  
-  #logo_img {
-    width: 100%; /* Para tornar a imagem responsiva */
-    max-width: 334.306px; /* Largura máxima da imagem */
-    height: auto; /* Altura automática para manter a proporção */
-    flex-shrink: 0;
-    cursor: pointer;
-  }
-  
-  .sub_title_box {
-    margin: 120px 0 0 10%;
-  }
-  
-  #sub_title {
-    color: #FFAE0D;
-    font-family: "Heebo", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-  .title_box {
-    margin-left: 10%;
-    margin-top: 1%;
-  }
-  
-  #title {
-    color: #FFF;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 65px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-   #title2 {
-    color: #DDDDDD;
-    font-family: "Heebo", Helvetica, sans-serif;
-    font-size: 22px;
-    font-style: lime;
-    font-weight: 200;
-    line-height: normal;
-  }
-  .search_conteiner {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 100%;
-    display: flex;
+  background-image: url("https://domain-checker.dmarcian.com.br/background/img_dashboard.png");
+  margin: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
 }
-  
+
+.logo_img_box {
+  margin: 50px 0 0 10%;
+}
+
+#logo_img {
+  width: 100%; /* Para tornar a imagem responsiva */
+  max-width: 334.306px; /* Largura máxima da imagem */
+  height: auto; /* Altura automática para manter a proporção */
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.sub_title_box {
+  margin: 120px 0 0 10%;
+}
+
+#sub_title {
+  color: #FFAE0D;
+  font-family: "Heebo", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.title_box {
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+#title {
+  color: #FFF;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+ #title2 {
+  color: #DDDDDD;
+  font-family: "Heebo", Helvetica, sans-serif;
+  font-size: 22px;
+  font-style: lime;
+  font-weight: 200;
+  line-height: normal;
+}
+.search_conteiner {
+  margin-left: 10%;
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+}
+
 #search_input {
-    font-family: 'Sora', sans-serif !important;
-    font-size: 26px;
-    font-weight: 300;
-    color: #474747;
-    width: 1200px;
-    height: 70px;
-	
-	
-	
+  font-family: 'Sora', sans-serif !important;
+  font-size: 26px;
+  font-weight: 300;
+  color: #474747;
+  width: 1200px;
+  height: 70px;
+
 }
 
 #search_btn {
-  font-family: 'Sora', sans-serif !important;
-  font-size: 20px;
-  font-weight: 650;
-  color: #FFF;
-  background: #FC7025;
-  width: 180px;
-  height: 70px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  border: 5px solid #FFFF;
+font-family: 'Sora', sans-serif !important;
+font-size: 20px;
+font-weight: 650;
+color: #FFF;
+background: #FC7025;
+width: 180px;
+height: 70px;
+position: relative;
+display: inline-block;
+cursor: pointer;
+border: 5px solid #FFFF;
 }
 
 .loading_conteiner{
-  display: none
+display: none
 }
 
 .loading-overlay {
-  display: none;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  color: #fff;
+display: none;
+position: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 1000;
+color: #fff;
 }
 
 .loader {
-    border: 10px solid rgba(255, 255, 255, 0.3);
-    border-top: 10px solid #FFAE0D;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    animation: spin 2s linear infinite;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+  border-top: 10px solid #FFAE0D;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-  /* Media queries para tornar o design responsivo */
-  @media screen and (max-width: 768px) {
-  
-    body{
-      overflow: auto;
-    }
-    
-    .logo_img_box,
-    .sub_title_box,
-    .title_box,
-    .search_conteiner {
-        margin-left: 5%; /* Reduza a margem à esquerda para tamanhos de tela menores */
-    }
-    
-    #search_input,
-    #search_btn {
-        width: 80%; /* Preencher a largura do contêiner pai */
-    }
+/* Media queries para tornar o design responsivo */
+@media screen and (max-width: 768px) {
 
-    .loader{
-      border: 6px solid rgba(255, 255, 255, 0.3);
-      border-top: 6px solid #FFAE0D;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-
-    }
-
-    .search_conteiner{
-      position: relative;
-      display: inline-block;
-    }
+  body{
+    overflow: auto;
   }
   
+  .logo_img_box,
+  .sub_title_box,
+  .title_box,
+  .search_conteiner {
+      margin-left: 5%; /* Reduza a margem à esquerda para tamanhos de tela menores */
+  }
+  
+  #search_input,
+  #search_btn {
+      width: 80%; /* Preencher a largura do contêiner pai */
+  }
+
+  .loader{
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #FFAE0D;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .search_conteiner{
+    position: relative;
+    display: inline-block;
+  }
+}
