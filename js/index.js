@@ -20,26 +20,25 @@ async function searchDomain() {
 
     if (dominio !== '') {
         try {
+            
+            console.log(dominio)
             // Salva o domínio no banco de dados usando AJAX
             const responseBD = await fetch('./php/insere.php', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
                 body: `dominio_pesquisa=${encodeURIComponent(dominio)}`,
             });
 
             if (responseBD.ok) {
-
                 const responseAPI = await fetch(`${apiURL}${dominio}`, {
                     method: "GET",
-                    headers: headersList,
                     timeout: 10000
                 });
 
                 if (responseAPI.ok) {
                     const data = await responseAPI.text();
-                    window.location.href = `info.html?domain=${encodeURIComponent(dominio)}&data=${encodeURIComponent(data)}`;
+                     localStorage.setItem('dominio', dominio);
+                    localStorage.setItem('data', data);
+                    window.location.href = `info.html?domain=${dominio}`;
                 } else {
                     console.error('Erro na chamada da API');
                 }

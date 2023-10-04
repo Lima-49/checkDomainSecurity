@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     # Executa a query preparada
     if ($query->execute()) {
-        # Se a inserção for bem-sucedida, retorna uma resposta indicando sucesso (opcional)
         http_response_code(200);
+        echo json_encode(array("message" => "Domínio inserido com sucesso."));
     } else {
-        # Se houver um erro na inserção, retorna uma resposta de erro
         http_response_code(500);
+        echo json_encode(array("message" => "Erro na inserção de dados."));
     }
 
     # Fecha a declaração preparada
