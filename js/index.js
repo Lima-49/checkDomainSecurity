@@ -20,28 +20,34 @@ async function searchDomain() {
 
     if (dominio !== '') {
         try {
-            const headersList = {
-                "Accept": "*/*",
-                "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-            };
-
-            const response = await fetch(`${apiURL}${dominio}`, {
-                method: "GET",
-                headers: headersList,
-                timeout: 10000
+            // Salva o domínio no banco de dados usando AJAX
+            const responseBD = await fetch('./php/insere.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `dominio_pesquisa=${encodeURIComponent(dominio)}`,
             });
 
-            if (response.status === 200) {
-                const data = await response.text();
-                localStorage.setItem('dominio', dominio);
-                localStorage.setItem('data', data);
-                window.location.href = `info.html?domain=${dominio}`;
+            if (responseBD.ok) {
 
+                const responseAPI = await fetch(`${apiURL}${dominio}`, {
+                    method: "GET",
+                    headers: headersList,
+                    timeout: 10000
+                });
+
+                if (responseAPI.ok) {
+                    const data = await responseAPI.text();
+                    window.location.href = `info.html?domain=${encodeURIComponent(dominio)}&data=${encodeURIComponent(data)}`;
+                } else {
+                    console.error('Erro na chamada da API');
+                }
             } else {
-                console.error('Erro na chamada da API');
+                console.error('Erro ao salvar o domínio no banco de dados');
             }
         } catch (error) {
-            console.error('Erro na chamada da API', error);
+            console.error('Erro na chamada do PHP/API:', error);
         } finally {
             loadingContainer.style.display = 'none';
         }
