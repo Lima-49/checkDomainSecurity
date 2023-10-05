@@ -14,6 +14,24 @@ searchInput.addEventListener('keyup', async function (event) {
     }
 });
 
+function showModal(message) {
+    const modal = document.getElementById("myModal");
+    const modalMessage = document.getElementById("modal-message");
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+
+    const closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+
 async function searchDomain() {
     const dominio = searchInput.value.trim();
     loadingContainer.style.display = 'block';
@@ -44,6 +62,7 @@ async function searchDomain() {
                     window.location.href = `info.html?domain=${dominio}`;
                 } else {
                     console.error('Erro na chamada da API');
+                    showModal('Por favor, digite um domínio válido.');
                 }
             } else {
                 console.error('Erro ao salvar o domínio no banco de dados');
@@ -54,7 +73,6 @@ async function searchDomain() {
             loadingContainer.style.display = 'none';
         }
     } else {
-        console.error('Campo de entrada vazio');
         loadingContainer.style.display = 'none';
     }
 }

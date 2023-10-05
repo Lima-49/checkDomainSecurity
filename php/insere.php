@@ -4,7 +4,7 @@ include('conexao.php');
 # Verifica se o formulário foi submetido via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     # Obtém os dados do formulário de maneira segura
-    $data_pesquisa = date("d-m-Y");                             
+    $data_pesquisa = date("d-m-Y");                         
     $dominio_pesquisa = $conexao->real_escape_string($_POST['dominio_pesquisa']);
 
     # Prepara a query SQL para inserção de dados na tabela usando uma declaração preparada

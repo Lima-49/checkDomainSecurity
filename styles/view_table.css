@@ -1,0 +1,19 @@
+body {
+    background-image: url("https://domain-checker.dmarcian.com.br/background/img_dashboard.png");
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+  
+.logo_img_box {
+    margin: 50px 0 0 10%;
+}
+
+#logo_img {
+    width: 100%; /* Para tornar a imagem responsiva */
+    max-width: 334.306px; /* Largura máxima da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    flex-shrink: 0;
+    cursor: pointer;
+}
+  
