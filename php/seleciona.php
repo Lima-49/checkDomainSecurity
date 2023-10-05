@@ -4,24 +4,26 @@ include('conexao.php');
 # Verifica se o formulário foi submetido via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $usuario = $_POST['user'];
-    $senha = $_POST['pass'];
+    $usuario = $conexao->real_escape_string($_POST['user']);
+    $senha = $conexao->real_escape_string($_POST['pass']);
 
-    $sql = "SELECT * FROM TABLE_USERS WHERE user='$usuario' AND senha='$senha'";
-    $result = $conexao->query($sql);
-    
+    $query = $conexao->prepare("SELECT * FROM TABLE_USERS WHERE user = ? AND senha = ?");
+    $query->bind_param("ss", $usuario, $senha);
+
     # Executa a query preparada
+    $query->execute();
+    $result = $query->get_result();
+
     if ($result->num_rows > 0) {
         echo json_encode(array("message" => "Usuario encontrado"));
     } else {
         echo json_encode(array("message" => "Credenciais incorretas"));
     }
 
+    # Fecha a conexão
+    $query->close();
     $conexao->close();
 } else {
     http_response_code(405);
 }
-
-# Fecha a conexão
-$conexao->close();
 ?>

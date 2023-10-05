@@ -1,5 +1,3 @@
-var usuario = document.getElementById("user").value;
-const senha = document.getElementById("pass").value;
 const loadingContainer = document.querySelector('.loading_conteiner');
 const formSubmit = document.getElementById("login_form");
 
@@ -8,7 +6,10 @@ formSubmit.addEventListener("submit", async function (){
 })
 
 async function validLogin(){
+    
     loadingContainer.style.display = 'block';
+    var usuario = document.getElementById("user").value;
+    const senha = document.getElementById("pass").value;
 
     if ((usuario !== "") && (senha !== "")){
         try {
