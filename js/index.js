@@ -25,6 +25,9 @@ async function searchDomain() {
             // Salva o domínio no banco de dados usando AJAX
             const responseBD = await fetch('./php/insere.php', {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
                 body: `dominio_pesquisa=${encodeURIComponent(dominio)}`,
             });
 
