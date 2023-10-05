@@ -1,6 +1,7 @@
 const loadingContainer = document.querySelector('.loading_conteiner');
 const submitBTN = document.getElementById("login_submit");
 
+
 submitBTN.addEventListener("click", async function (event) {
     event.preventDefault();
     await validLogin();

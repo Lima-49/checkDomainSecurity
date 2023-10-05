@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/view_table.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Verificaçao de identidade do remetente do e-mail - autenticação e segurança de e-mails MailSecurity Protection</title>
 </head>
 <body>
@@ -12,6 +13,22 @@
         <img src="https://domain-checker.dmarcian.com.br/background/logo_MailSecurity-white.png", id="logo_img">
     </div>
 
+    <div class="title-header-conteiner">
+        <h1>Historico de Acessos</h1>
+    </div>
+
+    <table id="table-data">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Domínio Pesquisado</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/view_table.js"></script>
 </body>
 </html>
